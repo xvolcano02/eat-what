@@ -24,7 +24,7 @@
             display: inline-block;
             font-size: 16px;
             margin: 4px 2px;
-            margin-right: 400px;
+            margin-right: 20px;
             -webkit-transition-duration: 0.4s; /* Safari */
             transition-duration: 0.4s;
             cursor: pointer;
@@ -46,12 +46,9 @@
 <body>
     <h1 align="center">今天吃什么</h1>
             <div style="border: 1px rgb(15, 15, 15) solid;" id="root"><!--//只能点击一次 -->
-                <div style="text-align:center;height:50px;line-height:50px;">
                     <button class="btn" @click="breakfirst">早餐吃什么</button>
                     <button class="btn" @click="lunch">午餐吃什么</button>
                     <button class="btn" @click="dinner">晚餐吃什么</button>
-                </div>
-
 
                 <!-- <h3>{{meal}}</h3> -->
             </div>
