@@ -24,7 +24,7 @@
             display: inline-block;
             font-size: 16px;
             margin: 4px 2px;
-            margin-right: 20px;
+            margin-right: 0px;
             -webkit-transition-duration: 0.4s; /* Safari */
             transition-duration: 0.4s;
             cursor: pointer;
@@ -105,17 +105,17 @@
                         breakfirst(event){
                             var len=this.list1.length;
                             this.meal=this.list1[Math.floor(Math.random()*len)].name;
-                            alert(this.meal);
+                            alert("早餐吃: "+this.meal);
                         },
                         lunch(event){
                             var len=this.list2.length;
                             this.meal=this.list2[Math.floor(Math.random()*len)].name;
-                            alert(this.meal);
+                            alert("午餐吃: "+this.meal);
                         },
                         dinner(event){
                             var len=this.list3.length;
                             this.meal=this.list3[Math.floor(Math.random()*len)].name;
-                            alert(this.meal);
+                            alert("晚餐吃: "+this.meal);
                         }
                     },
                 });
