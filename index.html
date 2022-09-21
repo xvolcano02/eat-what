@@ -7,6 +7,16 @@
     <script type="text/javascript" src="../js/vue.js"></script>
     <title>今天吃什么</title>
     <style>
+        body{background-color: rgb(224, 192, 160); }
+        #app{
+            height:100VH;
+            background-image:url("http://y.gtimg.cn/music/photo_new/T002R300x300M000003xdmRa3RWKWC.jpg?max_age=2592000");
+            background-position: 50% center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: blur(90px);
+            opacity: 0.6;
+        }
         .btn {
             /* 文字颜色 */
             color: #0099CC; 
@@ -54,7 +64,7 @@
                     </a>
                 <!-- <h3>{{meal}}</h3> -->
             </div>
-         
+            <div id="app"></div>
             <script>
                 const app= new Vue({
                     el:"#root",
@@ -134,5 +144,6 @@
                 });
         
             </script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Ukenn2112/UkennWeb@3.0/index/web.js"></script>
 </body>
 </html>
