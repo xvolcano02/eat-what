@@ -1,8 +1,88 @@
-<p>Hello 大家好</p>
-<p>我是volcano，这是我的个人网站。 </p>
-<p>很高兴你来到这里, 你可以在以下的网站找到我</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+            <div style="border: 1px rgb(15, 15, 15) solid;" id="root"><!--//只能点击一次 -->
+                <h2>今天吃什么</h2>
+                <button @click="breakfirst">早餐吃什么</button>
+                <button @click="lunch">午餐吃什么</button>
+                <button @click="dinner">晚餐吃什么</button>
 
-<ul>
-  <li> <a href="https://www.zhihu.com/people/zhuo-xin-94-10">知乎</a> </li>
-  <li> <a href="https://blog.csdn.net/weixin_51007786?spm=1000.2115.3001.5343">我的博客</a> </li>
-</ul>
+                <h3>{{meal}}</h3>
+            </div>
+         
+            <script>
+                // var content=["重庆小面","麻辣香锅","卤肉饭","热干面","烤肉卷+粥"];
+                const app= new Vue({
+                    el:"#root",
+                    data: {
+                            meal:"",
+                            list1: [
+                                    {id:1,name: "黑米粥"},
+                                    {id:2,name: "豆沙包"},
+                                    {id:3,name:"馅饼"},
+                                    {id:4,name:"鸡蛋"},
+                                    {id:5,name:"油条"},
+                                ],
+                            list2:[
+                                    {id:1,name: "卤肉饭"},
+                                    {id:2,name: "麻辣香锅"},
+                                    {id:3,name:"猪肚鸡"},
+                                    {id:4,name:"自助餐"},
+                                    {id:5,name:"炒饭"},
+                                    {id:6,name: "民族餐厅"},
+                                    {id:7,name: "酱炸的肉+窗口菜"},
+                                    {id:8,name:"茶香鸡米饭"},
+                                    {id:9,name:"石锅拌饭"},
+                                    {id:10,name:"烤鱼饭"},
+                                    {id:11,name: "煲仔饭(双创)"},
+                                    {id:12,name: "黄焖鸡米饭(双创)"},
+                                ],
+                            list3:[
+                                    {id:1,name: "卤肉饭"},
+                                    {id:2,name: "麻辣香锅"},
+                                    {id:3,name:"猪肚鸡"},
+                                    {id:4,name:"自助餐"},
+                                    {id:5,name:"炒饭"},
+                                    {id:6,name: "民族餐厅"},
+                                    {id:7,name: "酱炸的肉+窗口菜"},
+                                    {id:8,name:"茶香鸡米饭"},
+                                    {id:9,name:"石锅拌饭"},
+                                    {id:10,name:"烤鱼饭"},
+                                    {id:11,name: "煲仔饭(双创)"},
+                                    {id:12,name: "黄焖鸡米饭(双创)"},
+                                    {id:13,name: "烤肉卷+粥"},
+                                    {id:14,name: "重庆小面"},
+                                    {id:15,name:"羊肉烩面"},
+                                    {id:16,name:"煎饼果子"},
+                                    {id:17,name:"热干面"},
+                                    {id:18,name: "三楼饺子"},
+                                ],
+                            },
+                    methods: {
+                        breakfirst(event){
+                            var len=this.list1.length;
+                            console.log(len);
+                            this.meal=this.list1[Math.floor(Math.random()*len)];
+                        },
+                        lunch(event){
+                            var len=this.list2.length;
+                            this.meal=this.list2[Math.floor(Math.random()*len)];
+                        },
+                        dinner(event){
+                            var len=this.list3.length;
+                            console.log(len);
+                            this.meal=this.list3[Math.floor(Math.random()*len)];
+                        }
+                    },
+                });
+        
+            </script>
+</body>
+</html>
