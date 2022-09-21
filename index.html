@@ -5,16 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="../js/vue.js"></script>
-    <title>Document</title>
+    <title>今天吃什么</title>
+    <style>
+        .btn {
+            /* 文字颜色 */
+            color: #0099CC; 
+            /* 清除背景色 */
+            background: transparent; 
+            /* 边框样式、颜色、宽度 */
+            border: 2px solid #0099CC;
+            /* 给边框添加圆角 */
+            border-radius: 6px; 
+            /* 字母转大写 */
+            border: none;
+            color: rgb(229, 221, 221);
+            padding: 16px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            margin-right: 400px;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .btn {
+            background-color: white; 
+            color: black; 
+            border: 2px solid #008CBA;
+        }
+        /* 悬停样式 */
+        .btn:hover {
+            background-color: #008CBA;
+            color: white;
+        }
+    </style>
 </head>
 <body>
+    <h1 align="center">今天吃什么</h1>
             <div style="border: 1px rgb(15, 15, 15) solid;" id="root"><!--//只能点击一次 -->
-                <h2>今天吃什么</h2>
-                <button @click="breakfirst">早餐吃什么</button>
-                <button @click="lunch">午餐吃什么</button>
-                <button @click="dinner">晚餐吃什么</button>
+                <div style="text-align:center;height:50px;line-height:50px;">
+                    <button class="btn" @click="breakfirst">早餐吃什么</button>
+                    <button class="btn" @click="lunch">午餐吃什么</button>
+                    <button class="btn" @click="dinner">晚餐吃什么</button>
+                </div>
 
-                <h3>{{meal}}</h3>
+
+                <!-- <h3>{{meal}}</h3> -->
             </div>
          
             <script>
@@ -69,14 +108,17 @@
                         breakfirst(event){
                             var len=this.list1.length;
                             this.meal=this.list1[Math.floor(Math.random()*len)].name;
+                            alert(this.meal);
                         },
                         lunch(event){
                             var len=this.list2.length;
                             this.meal=this.list2[Math.floor(Math.random()*len)].name;
+                            alert(this.meal);
                         },
                         dinner(event){
                             var len=this.list3.length;
                             this.meal=this.list3[Math.floor(Math.random()*len)].name;
+                            alert(this.meal);
                         }
                     },
                 });
