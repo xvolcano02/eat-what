@@ -64,86 +64,87 @@
                     </a>
                 <!-- <h3>{{meal}}</h3> -->
             </div>
-            <div id="app"></div>
-            <script>
-                const app= new Vue({
-                    el:"#root",
-                    data: {
-                            meal:"",
-                            list1: [
-                                    {id:1,name: "黑米粥+馅饼+鸡蛋"},
-                                    {id:2,name: "小米粥+豆沙包+鸡蛋"},
-                                    {id:3,name:"黑米粥+油条+鸡蛋"},
-                                    {id:4,name: "小米粥+馅饼+鸡蛋"},
-                                    {id:5,name: "黑米粥+豆沙包+鸡蛋"},
-                                    {id:6,name:"小米粥+油条+鸡蛋"},
-                                ],
-                            list2:[
-                                    {id:1,name: "卤肉饭"},
-                                    {id:2,name: "麻辣香锅"},
-                                    {id:3,name:"猪肚鸡"},
-                                    {id:4,name:"自助餐"},
-                                    {id:5,name:"炒饭"},
-                                    {id:6,name: "民族餐厅"},
-                                    {id:7,name: "酱炸的肉+窗口菜"},
-                                    {id:8,name:"茶香鸡米饭"},
-                                    {id:9,name:"石锅拌饭"},
-                                    {id:10,name:"烤鱼饭"},
-                                    {id:11,name: "煲仔饭(双创)"},
-                                    {id:12,name: "黄焖鸡米饭(双创)"},
-                                    {id:13,name: "肉蟹煲(双创)"},
-                                ],
-                            list3:[
-                                    {id:1,name: "卤肉饭"},
-                                    {id:2,name: "麻辣香锅"},
-                                    {id:3,name:"猪肚鸡"},
-                                    {id:4,name:"自助餐"},
-                                    {id:5,name:"炒饭"},
-                                    {id:6,name: "民族餐厅"},
-                                    {id:7,name: "酱炸的肉+窗口菜"},
-                                    {id:8,name:"茶香鸡米饭"},
-                                    {id:9,name:"石锅拌饭"},
-                                    {id:10,name:"烤鱼饭"},
-                                    {id:11,name: "煲仔饭(双创)"},
-                                    {id:12,name: "黄焖鸡米饭(双创)"},
-                                    {id:13,name: "烤肉卷+粥"},
-                                    {id:14,name: "重庆小面"},
-                                    {id:15,name:"羊肉烩面"},
-                                    {id:16,name:"煎饼果子"},
-                                    {id:17,name:"热干面"},
-                                    {id:18,name: "三楼饺子+烧烤"},
-                                    {id:19,name: "灌汤包(双创)"},
-                                    {id:13,name: "肉蟹煲(双创)"},
-                                ],
-                            },
-                    methods: {
-                        breakfirst(event){
-                            var len=this.list1.length;
-                            this.meal=this.list1[Math.floor(Math.random()*len)].name;
-                            alert("早餐吃: "+this.meal);
-                        },
-                        lunch(event){
-                            var len=this.list2.length;
-                            this.meal=this.list2[Math.floor(Math.random()*len)].name;
-                            if(this.meal.includes("双创")){
-                                alert("午餐吃: "+this.meal+"\nWarning:封校期间双创暂未开放")
-                            }
-                            else
-                                alert("午餐吃: "+this.meal);
-                        },
-                        dinner(event){
-                            var len=this.list3.length;
-                            this.meal=this.list3[Math.floor(Math.random()*len)].name;
-                            if(this.meal.includes("双创")){
-                                alert("晚餐吃: "+this.meal+"\nWarning:封校期间双创暂未开放")
-                            }
-                            else
-                                alert("晚餐吃: "+this.meal);
-                        }
+    <iframe src="http://music.163.com/outchain/player?type=0&amp;id=5176292930&amp;auto=0&amp;height=430" width="100%" height="450" frameborder="no" marginwidth="0" marginheight="0"></iframe> 
+     <div id="app"></div>
+    <script>
+        const app= new Vue({
+            el:"#root",
+            data: {
+                    meal:"",
+                    list1: [
+                            {id:1,name: "黑米粥+馅饼+鸡蛋"},
+                            {id:2,name: "小米粥+豆沙包+鸡蛋"},
+                            {id:3,name:"黑米粥+油条+鸡蛋"},
+                            {id:4,name: "小米粥+馅饼+鸡蛋"},
+                            {id:5,name: "黑米粥+豆沙包+鸡蛋"},
+                            {id:6,name:"小米粥+油条+鸡蛋"},
+                        ],
+                    list2:[
+                            {id:1,name: "卤肉饭"},
+                            {id:2,name: "麻辣香锅"},
+                            {id:3,name:"猪肚鸡"},
+                            {id:4,name:"自助餐"},
+                            {id:5,name:"炒饭"},
+                            {id:6,name: "民族餐厅"},
+                            {id:7,name: "酱炸的肉+窗口菜"},
+                            {id:8,name:"茶香鸡米饭"},
+                            {id:9,name:"石锅拌饭"},
+                            {id:10,name:"烤鱼饭"},
+                            {id:11,name: "煲仔饭(双创)"},
+                            {id:12,name: "黄焖鸡米饭(双创)"},
+                            {id:13,name: "肉蟹煲(双创)"},
+                        ],
+                    list3:[
+                            {id:1,name: "卤肉饭"},
+                            {id:2,name: "麻辣香锅"},
+                            {id:3,name:"猪肚鸡"},
+                            {id:4,name:"自助餐"},
+                            {id:5,name:"炒饭"},
+                            {id:6,name: "民族餐厅"},
+                            {id:7,name: "酱炸的肉+窗口菜"},
+                            {id:8,name:"茶香鸡米饭"},
+                            {id:9,name:"石锅拌饭"},
+                            {id:10,name:"烤鱼饭"},
+                            {id:11,name: "煲仔饭(双创)"},
+                            {id:12,name: "黄焖鸡米饭(双创)"},
+                            {id:13,name: "烤肉卷+粥"},
+                            {id:14,name: "重庆小面"},
+                            {id:15,name:"羊肉烩面"},
+                            {id:16,name:"煎饼果子"},
+                            {id:17,name:"热干面"},
+                            {id:18,name: "三楼饺子+烧烤"},
+                            {id:19,name: "灌汤包(双创)"},
+                            {id:13,name: "肉蟹煲(双创)"},
+                        ],
                     },
-                });
-        
-            </script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-nest.js/2.0.4/canvas-nest.js"></script>
+            methods: {
+                breakfirst(event){
+                    var len=this.list1.length;
+                    this.meal=this.list1[Math.floor(Math.random()*len)].name;
+                    alert("早餐吃: "+this.meal);
+                },
+                lunch(event){
+                    var len=this.list2.length;
+                    this.meal=this.list2[Math.floor(Math.random()*len)].name;
+                    if(this.meal.includes("双创")){
+                        alert("午餐吃: "+this.meal+"\nWarning:封校期间双创暂未开放")
+                    }
+                    else
+                        alert("午餐吃: "+this.meal);
+                },
+                dinner(event){
+                    var len=this.list3.length;
+                    this.meal=this.list3[Math.floor(Math.random()*len)].name;
+                    if(this.meal.includes("双创")){
+                        alert("晚餐吃: "+this.meal+"\nWarning:封校期间双创暂未开放")
+                    }
+                    else
+                        alert("晚餐吃: "+this.meal);
+                }
+            },
+        });
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-nest.js/2.0.4/canvas-nest.js"></script>
 </body>
 </html>
